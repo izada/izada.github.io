@@ -554,18 +554,6 @@ ul.icons li a:hover {
 	border:2px solid #53668d;"
 }
 
-#main .avatar:before {
-	content: '';
-	display: block;
-	position: absolute;
-	top: 50%;
-	left: -3em;
-	width: calc(100% + 6em);
-	height: 1px;
-	z-index: -1;
-	background: #53668d;
-}
-
 @media screen and (max-width: 480px) {
 
 	#main {
