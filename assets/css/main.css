@@ -437,13 +437,11 @@ ul.icons li a:before {
 }
 
 ul.icons li a:before {
-	color: #ffffff;
-	text-shadow: 1.25px 0px 0px #53668d, -1.25px 0px 0px #53668d, 0px 1.25px 0px #53668d, 0px -1.25px 0px #53668d;
+	color: #bababa;
 }
 
 ul.icons li a:hover:before {
 	color: #53668d;
-	text-shadow: 1.25px 0px 0px #ffffff, -1.25px 0px 0px #ffffff, 0px 1.25px 0px #ffffff, 0px -1.25px 0px #ffffff;
 }
 
 ul.icons li a:before {
