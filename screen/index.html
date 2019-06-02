@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>Screen Resolution Detector</title>
+	<meta name="description" content="Screen Resolution Detector"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Ibrahim Zada">
+
+	<style>
+		body {
+			background-color:#c1c1c1;
+			text-align:center; /* Counteract to IE5/Win Hack */
+			margin-top:100px;
+			text-transform:uppercase;
+		}
+		h1 {font-size:20px;}
+		.mainContent {
+			margin:0px auto; /* Right and left margin widths set to "auto" */
+			text-align:center; /* Counteract to IE5/Win Hack */
+			border:0px;
+			width:400px;
+		}
+		.logo {
+			font-family:"Trebuchet MS", Arial, Verdana;
+			font-size:21px;
+			font-weight:lighter;
+			color:#505050;
+			width:360px;
+			padding:20px;
+			background-color:#fbfbfb;
+			text-align:center;
+		}
+		.logo span {
+			color:#a60023;
+		}
+		.resolution {
+			text-align:center;
+			width:340px;
+			padding:20px;
+			border:#fbfbfb solid 10px;
+			margin-top:10px;
+			font-family:"Trebuchet MS", Arial, Verdana;
+			color:#a60023;
+			font-size:27px;
+			line-height:40px;
+		}
+		.resolution span{
+			color:#505050;
+			display:block;
+			font-size:55px;
+			text-transform:lowercase;
+		}
+		.sk {
+			width:360px;
+			padding:20px;
+			background-color:#fbfbfb;
+			text-align:center;
+			margin-top:10px;
+			font-family:"Trebuchet MS", Arial, Verdana;
+			color:#505050;
+			font-size:13px;
+			line-height:15px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="mainContent">
+		<div class="logo">
+			<h1><span>Screen</span> Resolution <span>Detector</span> </h1>
+		</div>
+		<div class="resolution">
+			You are using
+			<span id="resolutionNumber"></span>
+		</div>
+		<div class="sk">
+			<p>
+				The number above represents the screen resolution (width X height) in pixels
+			</p>
+		</div>
+	</div>
+
+	<SCRIPT type="text/javascript">
+		height = screen.height;
+		width = screen.width;
+		res = document.getElementById ('resolutionNumber');
+		res.innerHTML = width + " X " + height;
+		if (res == null)
+		{
+			alert ("resolution is null!");
+		}
+	</SCRIPT>
+
+</body>
+
+</html>
