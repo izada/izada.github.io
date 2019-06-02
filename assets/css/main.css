@@ -102,7 +102,7 @@ html {
 
 body {
 	height: 100%;
-	background-color: #000;
+	background-color: #53668d;
 }
 
 body:after {
@@ -462,8 +462,6 @@ ul.icons li a {
 	display: block;
 	width: 3em;
 	height: 3em;
-	border-radius: 100%;
-	border: solid 1px #c8cccf;
 	line-height: 3em;
 	overflow: hidden;
 	text-align: center;
@@ -482,11 +480,11 @@ ul.icons li a:before {
 
 ul.icons li a:before {
 	color: #ffffff;
-	text-shadow: 1.25px 0px 0px #c8cccf, -1.25px 0px 0px #c8cccf, 0px 1.25px 0px #c8cccf, 0px -1.25px 0px #c8cccf;
+	text-shadow: 1.25px 0px 0px #53668d, -1.25px 0px 0px #53668d, 0px 1.25px 0px #53668d, 0px -1.25px 0px #53668d;
 }
 
 ul.icons li a:hover:before {
-	text-shadow: 1.25px 0px 0px #000, -1.25px 0px 0px #000, 0px 1.25px 0px #000, 0px -1.25px 0px #000;
+	color: #53668d;
 }
 
 ul.icons li a:before {
@@ -537,6 +535,7 @@ ul.icons li a:hover {
 	position: relative;
 	text-align: center;
 	width: 27em;
+	opacity: 0.8;
 }
 
 #main .avatar {
