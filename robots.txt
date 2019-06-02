@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /stock/
+
+
+Sitemap: http://simcotrade.com/sitemap.xml
