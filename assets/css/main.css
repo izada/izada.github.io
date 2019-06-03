@@ -17,6 +17,7 @@ section, summary, time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	overflow-style: none;
 }
 
 article, aside, details, figcaption, figure,
@@ -165,8 +166,7 @@ p {
 h1, h2, h3, h4, h5, h6 {
 	color: #53668d;
 	line-height: 1.5;
-	margin: 0 0 0.5em 0;
-	font-weight: bold;
+	margin: 0 0 0 0;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -177,7 +177,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 h1 {
 	font-size: 1.95em;
 	letter-spacing: 0.1em;
-	margin: 0 0 0 0;
+	margin: -0.1em 0 0 0;
+	font-weight: bold;
 }
 
 h2 {
@@ -428,6 +429,7 @@ ul.icons li a {
 	text-align: center;
 	text-indent: 3em;
 	white-space: nowrap;
+	margin: -1em 0 -1em 0;
 }
 
 ul.icons li a:before {
