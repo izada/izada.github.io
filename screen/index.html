@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>Screen Resolution Detector</title>
+	<meta name="description" content="Screen Resolution Detector, Screen Size Detector, Monitor Size Detector"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Ibrahim Zada">
+
+	<style>
+		body {
+			background-color:#53668d;
+			text-align:center;
+			margin-top:100px;
+		}
+		h1 {font-size:24px;}
+		.mainContent {
+			margin:0px auto;
+			text-align:center;
+			border:0px;
+			width:400px;
+		}
+		h2 {font-size:28px;}
+		.mainContent {
+			margin:0px auto;
+			text-align:center;
+			border:0px;
+			width:400px;
+		}
+		h3 {font-size:16px;}
+		.mainContent {
+			margin:0px auto;
+			text-align:center;
+			border:0px;
+			width:400px;
+		}
+		.res {
+			font-family: Calibri, Arial, sans-serif;
+			font-size:21px;
+			font-weight:lighter;
+			color:#53668d;
+			width:360px;
+			padding:20px;
+			background-color:#ffffff;
+			text-align:center;
+			border-radius: 50px;
+			opacity: 0.8;
+		}
+		hr {
+			border: 0;
+			border-bottom: solid 1px #53668d;
+			margin: 1em 0 1em 0;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="mainContent">
+		<div class="res">
+			<h1>Screen Resolution Detector</h1>
+			<hr/>
+			<h2>You are using<br/><div id="resolutionNumber"></div></h2>
+			<hr/>
+			<h3>
+				The number above represents the screen resolution (width X height) in pixels.
+			</h3>
+		</div>
+	</div>
+
+	<SCRIPT type="text/javascript">
+		height = screen.height;
+		width = screen.width;
+		res = document.getElementById ('resolutionNumber');
+		res.innerHTML = width + " X " + height;
+		if (res == null)
+		{
+			alert ("resolution is null!");
+		}
+	</SCRIPT>
+
+</body>
+
+</html>
