@@ -17,7 +17,6 @@ section, summary, time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	overflow-style: none;
 }
 
 article, aside, details, figcaption, figure,
@@ -588,7 +587,7 @@ ul.icons li a:hover {
 	min-height: 100%;
 	padding: 1em;
 	z-index: 2;
-	margin: 0 0 1em 0;
+	margin: 0 0 0 0;
 }
 
 #wrapper > * {
