@@ -2,10 +2,9 @@
 
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
+	<url>
 
-      <loc>http://zada.xyz/</loc>
-      <loc>http://zada.xyz/screen/</loc>
+		<loc>http://zada.xyz/</loc>
 
-   </url>
+	</url>
 </urlset>
