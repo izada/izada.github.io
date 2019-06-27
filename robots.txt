@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 
-Sitemap: http://zada.xyz/sitemap.xml
+Sitemap: https://zada.xyz/sitemap.xml
