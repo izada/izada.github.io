@@ -323,9 +323,9 @@ a.btn-bordered {
 
 .spinner:before {
     border-radius: 100%;
-    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 50%, #363636 50%);
-    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 50%, #363636 50%);
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #363636 50%)
+    background: -moz-linear-gradient(left, rgba(36, 36, 36, 0) 50%, #363636 50%);
+    background: -webkit-linear-gradient(left, rgba(36, 36, 36, 0) 50%, #363636 50%);
+    background: linear-gradient(to right, rgba(36, 36, 36, 0) 50%, #363636 50%)
 }
 
 .spinner:after {
