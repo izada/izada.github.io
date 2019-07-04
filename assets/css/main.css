@@ -301,9 +301,9 @@ a.btn-bordered {
     margin: 0 auto;
     border-radius: 50%;
     background: #363636;
-    background: -moz-linear-gradient(top, #363636 10%, rgba(255, 255, 255, 0) 100%);
-    background: -webkit-linear-gradient(top, #363636 10%, rgba(255, 255, 255, 0) 100%);
-    background: linear-gradient(to bottom, #363636 10%, rgba(255, 255, 255, 0) 100%);
+    background: -moz-linear-gradient(top, #363636 10%, rgba(36, 36, 36, 0) 100%);
+    background: -webkit-linear-gradient(top, #363636 10%, rgba(36, 36, 36, 0) 100%);
+    background: linear-gradient(to bottom, #363636 10%, rgba(36, 36, 36, 0) 100%);
     -webkit-animation: load 1s infinite linear;
     -moz-animation: load 1s infinite linear;
     animation: load 1s infinite linear
