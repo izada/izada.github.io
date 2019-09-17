@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="author" content="Ibrahim Zada">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="msapplication-TileColor" content="#d4d4d4" />
+	<meta name="theme-color" content="#d4d4d4" />
+	<meta name="description" content="What is your screen resolution? Find out instantly for free!" />
+	<link rel="icon" type="image/png" href="./assets/fav.png"/>
+	<title>What is my screen resolution</title>
+	<style>
+		body {
+			background-color:#006341;
+			text-align:center;
+			margin-top:100px;
+		}
+		h1 {
+			font-size:16px;
+		}
+		p {
+			margin:0 36px 0 36px;
+		}
+		.mainContent {
+			margin:0px auto;
+			text-align:center;
+			border:0px;
+			width:400px;
+		}
+		.mainTitle {
+			font-family:Helvetica Neue,Calibri,Arial;
+			font-size:18px;
+			color:#333333;
+			width:360px;
+			padding:20px;
+			background-color:#FFFFFF;
+			text-align:center;
+			border-radius: 50px;
+		}
+		.mainTitle span {
+			color:#006341;
+		}
+		.resolution {
+			text-align:center;
+			width:340px;
+			padding:20px;
+			border:#FFFFFF solid 5px;
+			margin-top:10px;
+			font-family:Helvetica Neue,Calibri,Arial;
+			color:#FFFFFF;
+			font-size:21px;
+			line-height:50px;
+			border-radius: 50px;
+		}
+		.resolution span{
+			color:#FFFFFF;
+			display:block;
+			font-size:46px;
+		}
+		.note {
+			width:360px;
+			padding:20px;
+			background-color:#FFFFFF;
+			text-align:center;
+			margin-top:10px;
+			font-family:Helvetica Neue,Calibri,Arial;
+			color:#666666;
+			font-size:12px;
+			line-height:15px;
+			border-radius: 50px;
+		}
+		.note a {
+			color:#c9c9c9;
+			text-decoration: none;
+		}
+		.note a:hover{
+			color:#666666;
+		}
+		.marge{
+			margin: 36px 0 0 0;
+		}
+	</style>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141272847-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-141272847-1');
+	</script>
+</head>
+
+<body>
+	<div class="mainContent">
+		<div class="mainTitle">
+			<h1><span>What</span> is <span>my</span> screen <span>resolution</span></h1>
+		</div>
+		<div class="resolution">
+			You are using
+			<span id="resolutionNumber"></span>
+		</div>
+		<div class="note">
+			<p>
+				The number above represents your screen / monitor resolution (in width and height)
+			</p>
+			<p class="marge">This tool provided free by <a href ="http://zada.xyz">zada.xyz</a></p>
+		</div>
+	</div>
+
+	<SCRIPT type="text/javascript">
+		<!--
+
+			height = screen.height;
+			width = screen.width;
+
+			res = document.getElementById ('resolutionNumber');
+			res.innerHTML = width + " X " + height;
+
+			if (res == null)
+			{
+				alert ("Resolution is null!");
+			}
+
+//-->
+</SCRIPT>
+
+</body>
+</html>
