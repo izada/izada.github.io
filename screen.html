@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="msapplication-TileColor" content="#d4d4d4" />
 	<meta name="theme-color" content="#d4d4d4" />
-	<meta name="description" content="What is your screen resolution? Find out instantly for free!" />
+	<meta name="description" content="What is your screen resolution and window size? Find out instantly for free!" />
 	<link rel="icon" type="image/png" href="./assets/fav.png"/>
 	<title>What is my screen resolution?</title>
 	<style>
@@ -131,11 +131,13 @@
 		</div>
 		<div class="resolution">
 			You are using
-			<span id="resolutionNumber"></span>
+			<span id="screenResolution"></span>
+			with window size
+			<span id="windowSize"></span>
 		</div>
 		<div class="note">
 			<p>
-				The number above represents your screen resolution as width × height in pixels.
+				The numbers above represent your screen resolution and window size as width × height in pixels.
 			</p>
 			<p class="marge">This tool provided free by <a href ="http://zada.xyz">zada.xyz</a></p>
 		</div>
@@ -143,15 +145,24 @@
 
 	<SCRIPT>
 
-		height = screen.height;
-		width = screen.width;
+		heightS = screen.height;
+		widthS = screen.width;
+		heightW = window.innerHeight;
+		widthW = window.innerWidth;
 
-		res = document.getElementById ('resolutionNumber');
-		res.innerHTML = width + " × " + height;
+		resS = document.getElementById ('screenResolution');
+		resS.innerHTML = widthS + " × " + heightS;
+		resW = document.getElementById ('windowSize');
+		resW.innerHTML = widthW + " × " + heightW;
 
-		if (res == null)
+		if (resS == null || resW == null)
 		{
-			alert ("Resolution is null!");
+			alert ("Resolution or size is null!");
+		}
+
+		window.onresize = function()
+		{
+			location.reload();
 		}
 
 	</SCRIPT>
