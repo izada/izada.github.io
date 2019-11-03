@@ -7,9 +7,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="msapplication-TileColor" content="#d4d4d4" />
 	<meta name="theme-color" content="#d4d4d4" />
-	<meta name="description" content="What is your screen resolution and window size? Find out instantly for free!" />
-	<link rel="icon" type="image/png" href="./assets/fav.png"/>
+
+	<!-- Title and Description -->
 	<title>What is my screen resolution?</title>
+	<meta name="description" content="What is your screen resolution and window size? Find out instantly for free!" />
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="./fav.png"/>
+
+	<!-- Style -->
 	<style>
 		html {
 			height:100%;
@@ -113,6 +119,7 @@
 			margin:36px 0 0 0;
 		}
 	</style>
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141272847-1"></script>
 	<script>
@@ -122,9 +129,10 @@
 
 		gtag('config', 'UA-141272847-1');
 	</script>
-</head>
 
+</head>
 <body>
+
 	<div class="mainContent">
 		<div class="mainTitle">
 			<h1>What is my screen resolution?</h1>
@@ -143,29 +151,18 @@
 		</div>
 	</div>
 
-	<SCRIPT>
-
+	<script>
 		heightS = screen.height;
 		widthS = screen.width;
 		heightW = window.innerHeight;
 		widthW = window.innerWidth;
-
 		resS = document.getElementById ('screenResolution');
 		resS.innerHTML = widthS + " × " + heightS;
 		resW = document.getElementById ('windowSize');
 		resW.innerHTML = widthW + " × " + heightW;
-
-		if (resS == null || resW == null)
-		{
-			alert ("Resolution or size is null!");
-		}
-
-		window.onresize = function()
-		{
-			location.reload();
-		}
-
-	</SCRIPT>
+		if (resS == null || resW == null) {alert("Resolution or size is null!");}
+		window.onresize = function() {location.reload();}
+	</script>
 
 </body>
 </html>
