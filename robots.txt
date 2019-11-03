@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /signature/
-
-
-Sitemap: https://zada.xyz/sitemap.xml
