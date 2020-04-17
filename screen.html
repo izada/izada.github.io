@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
 	<meta charset="utf-8" />
@@ -18,107 +18,146 @@
 	<meta property="og:description" name="description" content="What is your screen resolution and window size? Find out instantly for free!">
 
 	<!-- Style -->
-	<style>
-		html {
-			height:100%;
-			background:linear-gradient(135deg,#673e0f 0,#000 100%);
-			background-repeat:no-repeat;
-			background-size:cover;
-			background-attachment:fixed;
-		}
+	<style type="text/css">
 		body {
-			text-align:center;
-			margin:100px 0 100px 0;
+			height: 100%;
+			background: linear-gradient(135deg,#673e0f 0,#000 100%);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
 		}
+
+
+		body {
+			color: rgba(255, 255, 255, 0.65);
+			font-family: Helvetica Neue,Calibri,Arial;
+			font-size: 13pt;
+			font-weight: 200;
+			line-height: 1.65;
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			body {
+				font-size: 12pt;
+			}
+
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none;
+			border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
+			-moz-transition: border-bottom-color 0.2s ease-in-out, color 0.2s ease-in-out;
+			-webkit-transition: border-bottom-color 0.2s ease-in-out, color 0.2s ease-in-out;
+			-ms-transition: border-bottom-color 0.2s ease-in-out, color 0.2s ease-in-out;
+			transition: border-bottom-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		}
+
+		a:hover {
+			color: #ffffff;
+			border-bottom-color: transparent;
+		}
+
 		h1 {
-			font-size:16px;
+			color: #ffffff;
+			font-weight: 200;
+			line-height: 1.5;
+			margin: 0 0 1em 0;
 		}
-		h1::selection {
-			background-color:#666666;
-			color:#fff;
+
+		h1 a {
+			color: inherit;
+			text-decoration: none;
 		}
-		p {
-			margin:0 36px 0 36px;
+
+		strong {
+			color: #ffffff;
+			font-weight: 200;
 		}
-		p::selection {
-			background-color:#666666;
-			color:#fff;
+
+
+		@media screen and (max-width: 980px) {
+
+			h1 br {
+				display: none;
+			}
+
 		}
-		.mainContent {
-			margin:0px auto;
-			text-align:center;
-			border:0px;
-			width:400px;
+
+		h1 {
+			font-size: 1.75em;
 		}
-		.mainTitle {
-			font-family:Helvetica Neue,Calibri,Arial;
-			font-size:18px;
-			color:#333333;
-			width:360px;
-			padding:20px;
-			background-color:#FFFFFF;
-			text-align:center;
-			border-radius:50px;
+
+		@media screen and (max-width: 980px) {
+
+			h1 {
+				font-size: 1.5em;
+			}
+
 		}
-		.mainTitle::selection {
-			background-color:#666666;
-			color:#fff;
+
+		@media screen and (max-width: 736px) {
+
+			h1 {
+				font-size: 1.25em;
+			}
+
 		}
-		.mainTitle span::selection {
-			background-color:#666666;
-			color:#fff;
+
+		/* Wrapper */
+
+		#wrapper {
+			text-align: center;
+			padding: 2em 20em 4em 20em;
+
 		}
-		.resolution {
-			text-align:center;
-			width:350px;
-			padding:20px;
-			border:#FFFFFF solid 5px;
-			margin-top:10px;
-			font-family:Helvetica Neue,Calibri,Arial;
-			color:#FFFFFF;
-			font-size:21px;
-			line-height:50px;
-			border-radius:50px;
+
+		@media screen and (max-width: 1280px) {
+
+			#wrapper {
+				padding: 2em 4em 4em 4em;
+			}
+
 		}
-		.resolution::selection {
-			background-color:#fff;
-			color:#673e0f;
+
+		/* Header */
+
+		#header {
+			text-align: center;
+			padding: 6em 0 4em 0;
 		}
-		.resolution span{
-			color:#FFFFFF;
-			display:block;
-			font-size:46px;
+
+		#header h1 {
+			color: rgba(255, 255, 255, 0.65);
 		}
-		.resolution span::selection {
-			background-color:#fff;
-			color:#673e0f;
+
+		@media screen and (max-width: 1280px) {
+
+			#header {
+				padding: 4em 0 2em 0;
+			}
 		}
-		.note {
-			width:360px;
-			padding:20px;
-			background-color:#FFFFFF;
-			text-align:center;
-			margin-top:10px;
-			font-family:Helvetica Neue,Calibri,Arial;
-			color:#666666;
-			font-size:12px;
-			line-height:15px;
-			border-radius:50px;
+
+		/* Footer */
+
+		#footer {
+			text-align: center;
+			padding: 4em 0 4em 0;
+			font-size: 1em;
+			bottom: 0;
+			position: fixed;
+			width: 100%;
+			left: 0;
 		}
-		.note a {
-			color:#c9c9c9;
-			text-decoration:none;
-			font-weight:bold;
-		}
-		.note a::selection {
-			background-color:#666666;
-			color:#fff;
-		}
-		.note a:hover{
-			color:#666666;
-		}
-		.marge{
-			margin:36px 0 0 0;
+
+
+		@media screen and (max-width: 1280px) {
+
+			#footer {
+				padding: 4em 0 4em 0;
+			}
+
 		}
 	</style>
 
@@ -135,22 +174,20 @@
 </head>
 <body>
 
-	<div class="mainContent">
-		<div class="mainTitle">
-			<h1>What is my screen resolution?</h1>
-		</div>
-		<div class="resolution">
-			You are using
-			<span id="screenResolution"></span>
-			with window size
-			<span id="windowSize"></span>
-		</div>
-		<div class="note">
-			<p>
-				The numbers above represent your screen resolution and window size as width × height in pixels.
-			</p>
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1>Hey sir,</h1>
+			<h1>You are using a screen resolution of <strong><span id="screenResolution"></span></strong> with window size <strong><span id="windowSize"></span></strong> as width×height in pixels!</h1>
+		</header>
+
+		<!-- Footer -->
+		<footer id="footer">
 			<p class="marge">This tool provided free by <a href ="https://www.linkedin.com/in/ibrahimzada/" target="_blank">Ibrahim Zada</a></p>
-		</div>
+		</footer>
+
 	</div>
 
 	<script>
@@ -159,9 +196,9 @@
 		heightW = window.innerHeight;
 		widthW = window.innerWidth;
 		resS = document.getElementById ('screenResolution');
-		resS.innerHTML = widthS + " × " + heightS;
+		resS.innerHTML = widthS + "×" + heightS;
 		resW = document.getElementById ('windowSize');
-		resW.innerHTML = widthW + " × " + heightW;
+		resW.innerHTML = widthW + "×" + heightW;
 		if (resS == null || resW == null) {alert("Resolution or size is null!");}
 		window.onresize = function() {location.reload();}
 	</script>
