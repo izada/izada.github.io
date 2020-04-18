@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="author" content="Ibrahim Zada">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="msapplication-TileColor" content="#d4d4d4" />
+	<meta name="theme-color" content="#af8b68" />
+	<link rel="icon" type="image/png" href="./fav.png">
+
+	<!-- Title -->
+	<title>Screen Resolution Detector</title>
+
+	<!-- OG Tags -->
+	<meta property="og:title" content="Screen Resolution Detector">
+	<meta property="og:image" content="./fav.png">
+	<meta property="og:description" name="description" content="What is your screen resolution and window size? Find out instantly!">
+
+	<!-- Style -->
+	<style>
+		body {
+			height: 100%;
+			background-color: #eeeff4;
+		}
+
+
+		body {
+			font-family: Helvetica Neue,Calibri,Arial;
+			font-size: 13pt;
+			font-weight: 200;
+			line-height: 1.65;
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			body {
+				font-size: 12pt;
+			}
+
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none;
+			border-bottom: dotted 1px #000000;
+		}
+
+		a:hover {
+			color: #af8b68;
+			border-bottom-color: transparent;
+		}
+
+		h1 {
+			color: #000000;
+			font-weight: 200;
+			line-height: 1.5;
+			margin: 0 0 1em 0;
+		}
+
+		h1 a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		h1 {
+			font-size: 1.75em;
+		}
+
+		@media screen and (max-width: 980px) {
+
+			h1 {
+				font-size: 1.5em;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			h1 {
+				font-size: 1.4em;
+			}
+
+		}
+
+		h2 {
+			color: #000000;
+			font-weight: 200;
+			line-height: 1.5;
+			margin: 0 0 1em 0;
+		}
+
+		h2 a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+
+		h2 {
+			font-size: 1.4em;
+		}
+
+		@media screen and (max-width: 980px) {
+
+			h2 {
+				font-size: 1.2em;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			h2 {
+				font-size: 1.1em;
+			}
+
+		}
+
+		strong {
+			color: #af8b68;
+			font-weight: 400;
+		}
+
+		/* Message */
+
+		#message {
+			padding: 4em 20em 4em 20em;
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			#message {
+				padding: 4em 4em 4em 4em;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#message {
+				padding: 4em 2em 4em 2em;
+			}
+
+		}
+
+		/* Header */
+
+		#header {
+			text-align: left;
+			text-align: justify;
+			padding: 6em 0 4em 0;
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			#header {
+				padding: 4em 0 2em 0;
+			}
+		}
+
+	</style>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141272847-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-141272847-1');
+	</script>
+
+</head>
+<body>
+
+	<!-- Message -->
+	<div id="message">
+
+		<!-- Header -->
+		<header id="header">
+			<h1>Hello sir,</h1>
+			<h1>You are using a screen resolution of <strong><span id="screenResolution"></span></strong> with window size <strong><span id="windowSize"></span></strong> as width×height in pixels!</h1>
+			<h2>Sincerely,<br /><a href ="https://www.linkedin.com/in/ibrahimzada/" target="_blank">Ibrahim Zada</a></h2>
+		</header>
+
+	</div>
+
+	<!-- Script -->
+	<script>
+		heightS = screen.height;
+		widthS = screen.width;
+		heightW = window.innerHeight;
+		widthW = window.innerWidth;
+		resS = document.getElementById ('screenResolution');
+		resS.innerHTML = widthS + "×" + heightS;
+		resW = document.getElementById ('windowSize');
+		resW.innerHTML = widthW + "×" + heightW;
+		if (resS == null || resW == null) {alert("Resolution or size is null!");}
+		window.onresize = function() {location.reload();}
+	</script>
+
+</body>
+</html>
