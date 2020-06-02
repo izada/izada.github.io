@@ -23,10 +23,6 @@
 		body {
 			height: 100%;
 			background-color: #eeeff4;
-		}
-
-
-		body {
 			font-family: Helvetica Neue,Calibri,Arial;
 			font-size: 13pt;
 			font-weight: 200;
@@ -122,41 +118,41 @@
 			font-weight: 400;
 		}
 
-		/* Message */
+		/* container */
 
-		#message {
-			padding: 4em 20em 4em 20em;
+		#container {
+			padding: 4em 20em;
 
 		}
 
 		@media screen and (max-width: 1280px) {
 
-			#message {
-				padding: 4em 4em 4em 4em;
+			#container {
+				padding: 4em 4em;
 			}
 
 		}
 
 		@media screen and (max-width: 736px) {
 
-			#message {
-				padding: 4em 2em 4em 2em;
+			#container {
+				padding: 4em 2em;
 			}
 
 		}
 
-		/* Header */
+		/* message */
 
-		#header {
+		#message {
 			text-align: left;
 			text-align: justify;
-			padding: 6em 0 4em 0;
+			padding: 4em 0;
 		}
 
 		@media screen and (max-width: 1280px) {
 
-			#header {
-				padding: 4em 0 2em 0;
+			#message {
+				padding: 4em 0;
 			}
 		}
 
@@ -175,11 +171,11 @@
 </head>
 <body>
 
-	<!-- Message -->
-	<div id="message">
+	<!-- container -->
+	<div id="container">
 
-		<!-- Header -->
-		<header id="header">
+		<!-- message -->
+		<header id="message">
 			<h1>Hello Sir,</h1>
 			<h1>You are using a screen resolution of <strong><span id="screenResolution"></span></strong> with window size <strong><span id="windowSize"></span></strong> as width×height in pixels!</h1>
 			<h2>Sincerely,<br><a href ="https://www.linkedin.com/in/ibrahimzada/" target="_blank">Ibrahim Zada</a></h2>
