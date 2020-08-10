@@ -172,7 +172,7 @@
 		resS.innerHTML = widthS + "×" + heightS;
 		resW = document.getElementById ('windowSize');
 		resW.innerHTML = widthW + "×" + heightW;
-		if (resS == null || resW == null) {alert("Resolution or size is null!");}
+		if (heightS == null || widthS == null || heightW == null || widthW == null) {alert("Resolution or size is null!");}
 		window.onresize = function() {location.reload();}
 	</script>
 
