@@ -142,39 +142,42 @@
 
 	</style>
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141272847-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-141272847-1');
-	</script>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSKGN6H');</script>
+<!-- End Google Tag Manager -->
 
 </head>
 <body>
 
-	<!-- Message -->
-	<div id="message">
-		<h1>Hello Sir/Ma'am,</h1>
-		<h1>You are using a screen resolution of <strong><span id="screenResolution"></span></strong> with window size <strong><span id="windowSize"></span></strong> as width×height in pixels!</h1>
-		<h2>Sincerely,<br><a href ="https://www.linkedin.com/in/ibrahimzada/">Ibrahim Zada</a></h2>
-	</div>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSKGN6H"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 
-	<!-- Script -->
-	<script>
-		heightS = screen.height;
-		widthS = screen.width;
-		heightW = window.innerHeight;
-		widthW = window.innerWidth;
-		resS = document.getElementById ('screenResolution');
-		resS.innerHTML = widthS + "×" + heightS;
-		resW = document.getElementById ('windowSize');
-		resW.innerHTML = widthW + "×" + heightW;
-		if (heightS == null || widthS == null || heightW == null || widthW == null) {alert("Resolution or size is null!");}
-		window.onresize = function() {location.reload();}
-	</script>
+		<!-- Message -->
+		<div id="message">
+			<h1>Hello Sir/Ma'am,</h1>
+			<h1>You are using a screen resolution of <strong><span id="screenResolution"></span></strong> with window size <strong><span id="windowSize"></span></strong> as width×height in pixels!</h1>
+			<h2>Sincerely,<br><a href ="https://www.linkedin.com/in/ibrahimzada/">Ibrahim Zada</a></h2>
+		</div>
 
-</body>
-</html>
+		<!-- Script -->
+		<script>
+			heightS = screen.height;
+			widthS = screen.width;
+			heightW = window.innerHeight;
+			widthW = window.innerWidth;
+			resS = document.getElementById ('screenResolution');
+			resS.innerHTML = widthS + "×" + heightS;
+			resW = document.getElementById ('windowSize');
+			resW.innerHTML = widthW + "×" + heightW;
+			if (heightS == null || widthS == null || heightW == null || widthW == null) {alert("Resolution or size is null!");}
+			window.onresize = function() {location.reload();}
+		</script>
+
+	</body>
+	</html>
