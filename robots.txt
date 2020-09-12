@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /signature/
+
+
+Sitemap: https://izada.github.io/sitemap.xml
