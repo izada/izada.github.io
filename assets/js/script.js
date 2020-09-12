@@ -18,7 +18,7 @@ new cookieNoticeJS({
 
 // Localizations of the notice message
 'messageLocales': {
-	'en': 'We use using Google Analytics'
+	'en': 'We are using Google Analytics'
 },
 
 // Localizations of the dismiss button text
