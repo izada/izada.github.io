@@ -2,169 +2,40 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Ibrahim Zada">
-    <link rel="shortcut icon" type="image/png" href="./fav.png">
-    <!-- Title -->
-    <title>Screen Resolution Detector</title>
-    <!-- OG Tags -->
-    <meta property="og:title" content="Screen Resolution Detector">
-    <meta property="og:image" content="./fav.png">
-    <meta property="og:description" name="description" content="Find out your screen resolution and window size instantly!">
-    <!-- Style -->
-    <style>
-        body {
-            height: 100%;
-            background-color: #eeeff4;
-            font-family: -apple-system, BlinkMacSystemFont, "SF", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, Calibri, Arial;
-            font-size: 13pt;
-            font-weight: 200;
-            line-height: 1.65;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ibrahim Zada">
+  <link rel="shortcut icon" type="image/png" href="./assets/fav.png">
+  <!-- Title -->
+  <title>Screen Resolution Detector</title>
+  <!-- OG Tags -->
+  <meta property="og:title" content="Screen Resolution Detector">
+  <meta property="og:image" content="./assets/fav.png">
+  <meta property="og:description" name="description" content="Find out your screen resolution and window size instantly!">
+  <!-- CSS -->
+  <link href="./assets/css/style.css" rel="stylesheet">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141272847-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-        @media screen and (max-width: 1280px) {
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-            body {
-                font-size: 12pt;
-            }
-
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-            border-bottom: dotted 1px #000000;
-        }
-
-        a:hover {
-            color: #af8b6a;
-            border-bottom-color: transparent;
-        }
-
-        h1 {
-            color: #000000;
-            font-weight: 200;
-            line-height: 1.5;
-            margin: 0 0 1em 0;
-        }
-
-        h1 a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        h1 {
-            font-size: 1.75em;
-        }
-
-        @media screen and (max-width: 980px) {
-
-            h1 {
-                font-size: 1.5em;
-            }
-
-        }
-
-        @media screen and (max-width: 736px) {
-
-            h1 {
-                font-size: 1.4em;
-            }
-
-        }
-
-        h2 {
-            color: #000000;
-            font-weight: 200;
-            line-height: 1.5;
-            margin: 0 0 1em 0;
-        }
-
-        h2 a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-
-        h2 {
-            font-size: 1.4em;
-        }
-
-        @media screen and (max-width: 980px) {
-
-            h2 {
-                font-size: 1.2em;
-            }
-
-        }
-
-        @media screen and (max-width: 736px) {
-
-            h2 {
-                font-size: 1.1em;
-            }
-
-        }
-
-        strong {
-            color: #af8b6a;
-            font-weight: 400;
-        }
-
-        /* Message */
-
-        #message {
-            text-align: left;
-            text-align: justify;
-            margin: 10% 25%;
-        }
-
-        @media screen and (max-width: 1280px) {
-
-            #message {
-                margin: 20% 20%;
-            }
-        }
-
-        @media screen and (max-width: 736px) {
-
-            #message {
-                margin: 25% 10%;
-            }
-        }
-    </style>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141272847-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-141272847-1');
-    </script>
+    gtag('config', 'UA-141272847-1');
+  </script>
 </head>
 
 <body>
-    <!-- Message -->
-    <div id="message">
-        <h1>Hello Sir/Ma'am,</h1>
-        <h1>You are using a screen resolution of <strong><span id="screenResolution"></span></strong> with window size <strong><span id="windowSize"></span></strong> as width×height in pixels!</h1>
-        <h2>Sincerely,<br><a href="https://www.linkedin.com/in/ibrahimzada/">Ibrahim Zada</a></h2>
-    </div>
-    <!-- Script -->
-    <script>
-        heightS = screen.height;
-        widthS = screen.width;
-        heightW = window.innerHeight;
-        widthW = window.innerWidth;
-        resS = document.getElementById('screenResolution');
-        resS.innerHTML = widthS + "×" + heightS;
-        resW = document.getElementById('windowSize');
-        resW.innerHTML = widthW + "×" + heightW;
-        window.onresize = function() { location.reload(); }
-    </script>
+  <!-- Message -->
+  <div id="message">
+    <h1>Hello Sir/Ma'am,</h1>
+    <h1>You are using a screen resolution of <strong><span id="screenResolution"></span></strong> with window size <strong><span id="windowSize"></span></strong> as width×height in pixels!</h1>
+    <h2>Sincerely,<br><a href="https://www.linkedin.com/in/ibrahimzada/">Ibrahim Zada</a></h2>
+  </div>
+  <!-- JS -->
+  <script src="./assets/js/cookie.notice.min.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
