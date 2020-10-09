@@ -1,6 +1,6 @@
 @font-face {
     font-family: "roboto";
-    src: url("../font/Roboto-Light.ttf");
+    src: url("../font/Roboto-Thin.ttf");
 }
 
 body {
@@ -8,7 +8,6 @@ body {
     background-color: #eeeff4;
     font-family: roboto;
     font-size: 13pt;
-    font-weight: 200;
     line-height: 1.65;
 }
 
