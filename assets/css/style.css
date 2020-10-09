@@ -1,12 +1,12 @@
 @font-face {
-    font-family: "roboto";
+    font-family: "roboto-thin";
     src: url("../font/Roboto-Thin.ttf");
 }
 
 body {
     height: 100%;
     background-color: #eeeff4;
-    font-family: roboto;
+    font-family: roboto-thin;
     font-size: 13pt;
     line-height: 1.65;
 }
@@ -32,7 +32,6 @@ a:hover {
 
 h1 {
     color: #000000;
-    font-weight: 200;
     line-height: 1.5;
     margin: 0 0 1em 0;
 }
@@ -64,7 +63,6 @@ h1 {
 
 h2 {
     color: #000000;
-    font-weight: 200;
     line-height: 1.5;
     margin: 0 0 1em 0;
 }
@@ -97,7 +95,7 @@ h2 {
 
 strong {
     color: #af8b6a;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 /* Message */
