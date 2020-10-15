@@ -1,4 +1,4 @@
-// Reload
+// Detector
 heightS = screen.height;
 widthS = screen.width;
 heightW = window.innerHeight;
@@ -18,7 +18,7 @@ new cookieNoticeJS({
 
 // Localizations of the notice message
 'messageLocales': {
-	'en': 'We are using Google Analytics'
+	'en': 'We use cookies to ensure that you have the best experience on our website. If you continue to use this site we assume that you accept this.'
 },
 
 // Localizations of the dismiss button text
