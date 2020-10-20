@@ -21,40 +21,52 @@
 	<!-- CSS -->
 	<style>
 		body {
-			font-size: 14px; font-family: 'Poppins', sans-serif; width: 100%; height: 100%; margin: 0; font-weight: 400; overflow: auto;
+			font-family: 'Poppins', sans-serif;
 			background-color: #eeeff4;
 		}
 
 		.center-text{ text-align: center; }
-		
-		a{ text-decoration: none; color: inherit;}
+
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
 
 		.under{
 			border-bottom: dotted 1px #000;
 		}
 
-		a:hover{ text-decoration: none; color: #af8b6a; }
+		a:hover{
+			text-decoration: none;
+			color: #af8b6a;
+		}
 
 		h1 {
-			font-size: 16px; padding: 40px 0 10px 0;
+			font-size: 16px;
+			padding: 40px 0 10px 0;
 		}
 
 		p {
+			font-size: 14px;
 			text-align: justify;
 		}
 
 		@media only screen and (max-width: 767px) {	
-			p{ line-height: 1.4; }
-			h1{ font-size: 2.8em; line-height: 1; }
+			h1 { font-size: 14px; }
+			p { font-size: 12px; }
 		}
 
-		@media only screen and (max-width: 479px) {
-			body{ font-size: 12px; }
+		.main-area-privacy {
+			position: relative;
+			height: 100%;
+			z-index: 1;
+			padding: 0 20px;
 		}
 
-		.main-area-privacy{ position: relative; height: 100%; z-index: 1; padding: 0 20px;}
-
-		.main-area-privacy .desc{ margin: 20px auto; max-width: 500px; }
+		.main-area-privacy .desc {
+			margin: 20px auto;
+			max-width: 500px;
+		}
 	</style>
 
 </head>
