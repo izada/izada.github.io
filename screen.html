@@ -15,7 +15,131 @@
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   <!-- CSS -->
-  <link href="./assets/css/style.css" rel="stylesheet">
+  <style>
+    body {
+      height: 100%;
+      background-color: #eeeff4;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      color: #000000;
+      font-size: 12pt;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: dotted 1px #000000;
+    }
+
+    a:hover {
+      color: #af8b6a;
+      border-bottom-color: transparent;
+    }
+
+    p {
+      line-height: 1.5;
+      margin: 0 0 1em 0;
+      font-size: 1.75em;
+    }
+
+    p a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    @media screen and (max-width: 980px) {
+
+      p {
+        font-size: 1.5em;
+      }
+
+    }
+
+    @media screen and (max-width: 736px) {
+
+      p {
+        font-size: 1.4em;
+      }
+
+    }
+
+    .sig {
+      font-size: 1.4em;
+    }
+
+    @media screen and (max-width: 980px) {
+
+      .sig {
+        font-size: 1.2em;
+      }
+
+    }
+
+    @media screen and (max-width: 736px) {
+
+      .sig {
+        font-size: 1.1em;
+      }
+
+    }
+
+    strong {
+      color: #af8b6a;
+      font-weight: 400;
+    }
+
+    /* Message */
+
+    #message {
+      text-align: justify;
+      margin: 10% 25%;
+    }
+
+    @media screen and (max-width: 980px) {
+
+      #message {
+        margin: 15% 20%;
+      }
+    }
+
+    @media screen and (max-width: 736px) {
+
+      #message {
+        margin: 25% 10%;
+      }
+    }
+
+    /*Cookie Confirm Button*/
+
+    .confirm {
+      border-radius: 3px;
+    }
+
+    /*Pace Loader*/
+
+    .pace {
+      -webkit-pointer-events: none;
+      pointer-events: none;
+
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    .pace-inactive {
+      display: none;
+    }
+
+    .pace .pace-progress {
+      background: #af8b6a;
+      position: fixed;
+      z-index: 2000;
+      top: 0;
+      right: 100%;
+      width: 100%;
+      height: 2px;
+    }
+  </style>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141272847-1"></script>
   <script>
@@ -37,8 +161,20 @@
   </div>
   <!-- JS -->
   <script src="./assets/js/cookie.notice.min.js"></script>
-  <script src="./assets/js/script.js"></script>
   <script src="./assets/js/pace.min.js"></script>
+  <script>
+    // Detector
+    heightS = screen.height;
+    widthS = screen.width;
+    heightW = window.innerHeight;
+    widthW = window.innerWidth;
+    resS = document.getElementById('screenResolution');
+    resS.innerHTML = widthS + "×" + heightS;
+    resW = document.getElementById('windowSize');
+    resW.innerHTML = widthW + "×" + heightW;
+    // Reload
+    window.onresize = function() { location.reload(); }
+  </script>
 </body>
 
 </html>
