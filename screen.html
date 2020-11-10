@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Ibrahim Zada">
-  <link rel="shortcut icon" type="image/png" href="./assets/img/fav.png">
+  <link rel="shortcut icon" type="image/png" href="./assets/img/logo.png">
   <!-- Title -->
   <title>Screen Resolution Detector</title>
   <!-- OG Tags -->
@@ -47,10 +47,44 @@
       text-decoration: none;
     }
 
+    strong {
+      color: #af8b6a;
+      font-weight: 400;
+    }
+
+    #message {
+      text-align: justify;
+      margin: 10% 25%;
+    }
+
+    img {
+      width: 60px;
+      margin: 0 0 1.5em 0;
+    }
+
+    .sig {
+      font-size: 1.4em;
+    }
+
+    /*Responsive*/
+
     @media screen and (max-width: 980px) {
 
       p {
         font-size: 1.5em;
+      }
+
+      .sig {
+        font-size: 1.2em;
+      }
+
+      #message {
+        margin: 15% 20%;
+      }
+
+      img {
+        width: 50px;
+        margin: 0 0 1.5em 0;
       }
 
     }
@@ -61,52 +95,14 @@
         font-size: 1.4em;
       }
 
-    }
-
-    .sig {
-      font-size: 1.4em;
-    }
-
-    @media screen and (max-width: 980px) {
-
-      .sig {
-        font-size: 1.2em;
-      }
-
-    }
-
-    @media screen and (max-width: 736px) {
-
       .sig {
         font-size: 1.1em;
       }
 
-    }
-
-    strong {
-      color: #af8b6a;
-      font-weight: 400;
-    }
-
-    /* Message */
-
-    #message {
-      text-align: justify;
-      margin: 10% 25%;
-    }
-
-    @media screen and (max-width: 980px) {
-
-      #message {
-        margin: 15% 20%;
-      }
-    }
-
-    @media screen and (max-width: 736px) {
-
       #message {
         margin: 25% 10%;
       }
+
     }
 
     /*Cookie Confirm Button*/
@@ -155,9 +151,9 @@
 <body>
   <!-- Message -->
   <div id="message">
-    <p>Hello,</p>
+    <img src="./assets/img/logo.png" alt="Logo of Ibrahim Zada">
     <p>You are using a screen resolution of <strong><span id="screenResolution"></span></strong> with window size <strong><span id="windowSize"></span></strong> as width×height in pixels!</p>
-    <p class="sig">Sincerely,<br><a href="https://www.linkedin.com/in/ibrahimzada/">Ibrahim Zada</a></p>
+    <p class="sig">- <a href="https://www.linkedin.com/in/ibrahimzada/" target="_blank">Ibrahim Zada</a></p>
   </div>
   <!-- JS -->
   <script src="./assets/js/cookie.notice.min.js"></script>
