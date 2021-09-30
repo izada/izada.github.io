@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ibrahim Zada">
+  <link rel="shortcut icon" type="image/png" href="./assets/img/logo.png">
+  <!-- Theme -->
+  <meta name="theme-color" content="#000000">
+  <!-- Title -->
+  <title>Screen Resolution Detector</title>
+  <!-- OG Tags -->
+  <meta property="og:title" content="Screen Resolution Detector">
+  <meta property="og:image" content="./assets/img/og-image.png">
+  <meta property="og:description" name="description" content="Find out your screen resolution and window size online instantly!">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/line-awesome/css/line-awesome.min.css">
+  <!-- CSS -->
+  <style>
+  body {
+    height: 100%;
+    background-color: #eeeff4;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 12pt;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .under{
+    border-bottom: dotted 1px #000;
+  }
+
+  a:hover {
+    border-bottom-color: transparent;
+    border-bottom: solid 1px #000000;
+  }
+
+  p {
+    margin: 0 0 1em 0;
+    font-size: 1.5em;
+  }
+
+  strong {
+    color: #af8b6a;
+    font-weight: 500;
+  }
+
+  #message {
+    text-align: justify;
+    margin: 10% 25%;
+  }
+
+  img {
+    width: 60px;
+    margin: 0 0 1.4em 0;
+    image-rendering: -webkit-optimize-contrast;
+    user-drag: none;  
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+  }
+
+  .sig {
+    font-size: 1.2em;
+  }
+
+  /*Responsive*/
+
+  @media screen and (max-width: 980px) {
+
+    #message {
+      margin: 15% 20%;
+    }
+
+    img {
+      width: 50px;
+    }
+
+  }
+
+  @media screen and (max-width: 736px) {
+
+    p {
+      font-size: 1.4em;
+    }
+
+    .sig {
+      font-size: 1.1em;
+    }
+
+    #message {
+      margin: 25% 10%;
+    }
+
+  }
+
+  /*Cookie Confirm Button*/
+
+  .confirm {
+    border-radius: 4px;
+  }
+
+  /*Pace Loader*/
+
+  .pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  .pace-inactive {
+    display: none;
+  }
+
+  .pace .pace-progress {
+    background: #af8b6a;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 4px;
+  }
+</style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ELNWZ69M11"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ELNWZ69M11');
+</script>
+
+</head>
+<body>
+  <!-- Message -->
+  <div id="message">
+    <img src="./assets/img/logo.png" alt="Logo of Ibrahim Zada" class="lazyload">
+    <p>You are using a screen resolution of <strong><span id="screenResolution"></span></strong> with window size <strong><span id="windowSize"></span></strong> as width×height in pixels!</p>
+    <p class="sig">~ <a class="under" href="https://www.linkedin.com/in/ibrahimzada/" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile of Ibrahim Zada">Ibrahim Zada <i class="la la-external-link"></i></a></p>
+  </div>
+  <!-- JS -->
+  <script src="./assets/js/cookie.notice.min.js"></script>
+  <script src="./assets/js/pace.min.js"></script>
+  <script src="./assets/js/lazysizes.min.js"></script>
+  <script>
+    // Detector
+    heightS = screen.height;
+    widthS = screen.width;
+    heightW = window.innerHeight;
+    widthW = window.innerWidth;
+    resS = document.getElementById('screenResolution');
+    resS.innerHTML = widthS + "×" + heightS;
+    resW = document.getElementById('windowSize');
+    resW.innerHTML = widthW + "×" + heightW;
+    // Reload
+    window.onresize = function() { location.reload(); }
+  </script>
+</body>
+
+</html>
