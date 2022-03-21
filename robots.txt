@@ -1,6 +1,5 @@
 User-agent: *
 Disallow: /stuff/
-Disallow: /HM/
 
 
 Sitemap: https://zada.info/sitemap.xml
