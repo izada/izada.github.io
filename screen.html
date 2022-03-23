@@ -53,14 +53,14 @@
       font-size: 1.5em;
     }
 
-    strong {
-      color: #af8b6a;
-      font-weight: 500;
-    }
-
     #message {
       text-align: justify;
       margin: 15% 25%;
+    }
+
+    #screenResolution, #windowSize {
+      font-weight: 500;
+      color: #af8b6a;
     }
 
     img {
@@ -73,7 +73,7 @@
       -webkit-user-select: none;
     }
 
-    .sig {
+    .subp {
       font-size: 1.1em;
     }
 
@@ -93,7 +93,7 @@
         font-size: 1.4em;
       }
 
-      .sig {
+      .subp {
         font-size: 1em;
       }
 
@@ -149,7 +149,7 @@
 <body>
   <!-- Message -->
   <div id="message">
-    <p>You are using a screen resolution of <strong><span id="screenResolution"></span></strong> with window size <strong><span id="windowSize"></span></strong> as width×height in pixels!</p>
+    <p>You are using a screen resolution of <span id="screenResolution"></span> with window size <span id="windowSize"></span> as width×height in pixels!</p>
     <img src="./assets/img/iz.png" alt="IZ" class="lazyload noselect">
   </div>
   <!-- JS -->
