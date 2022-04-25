@@ -56,7 +56,15 @@
 
     #message {
       text-align: justify;
-      margin: 15% 25%;
+      margin: 2% 25%;
+    }
+
+    .brothersphoto {
+      width: 100%;
+      border-radius: 4px;
+      image-rendering: -webkit-optimize-contrast;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
     }
 
     .subp {
@@ -68,7 +76,7 @@
     @media screen and (max-width: 980px) {
 
       #message {
-        margin: 15% 20%;
+        margin: 10% 20%;
       }
 
     }
@@ -84,7 +92,7 @@
       }
 
       #message {
-        margin: 25% 10%;
+        margin: 10% 10%;
       }
 
     }
@@ -137,10 +145,13 @@
   <div id="message">
     <p>ZADA.info</p>
     <br>
+    <img src="./assets/img/brothers.jpg" alt="Zada Brothers" class="lazyload brothersphoto">
+    <br><br>
     <p class="subp">This domain is registered to enable the email service and host some online tools!</p>
   </div>
   <!-- JS -->
   <script src="./assets/js/pace.min.js"></script>
+  <script src="./assets/js/lazysizes.min.js"></script>
   <script src="./assets/js/cookie.notice.min.js"></script>
 </body>
 
