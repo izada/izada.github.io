@@ -37,13 +37,16 @@
   </script>
 
 </head>
+
 <body>
-  <header class="header">
-    <h1 class="heading">
+  <div class="header">
+    <div class="heading">
+      <img src="./assets/img/rose.png" alt="rose" class="lazyload herorose">
+      <br>
       Ibrahim & Ilham
       <span class="heading-subtext"> are getting married!</span>
-    </h1>
-  </header>
+    </div>
+  </div>
 
   <a data-scroll class="fixed-button" href="#details" id="dtlsButton">Read details</a> 
 
@@ -76,6 +79,7 @@
   </section>
   
   <script src="./assets/js/pace.min.js"></script>
+  <script src="./assets/js/lazysizes.min.js"></script>
   <script src="./assets/js/smooth-scroll.polyfills.min.js"></script>
   <script defer>
     var scroll = new SmoothScroll('a[href*="#"]');

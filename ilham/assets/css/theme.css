@@ -5,18 +5,14 @@
 }
 html, body{
     margin: 0;
-    height: 100vh;
     text-align: center;
 }
 .header{
     background-image: url(../img/hero.jpeg);
     background-repeat: no-repeat;
     background-position: 50% 60%;
-    background-attachment: scroll;
     background-size: cover;
-    height: 40vh;
-    margin: 0;
-    padding-top: 60vh;
+    height: 100vh;
 }
 .heading {
     color: #ffffff;
@@ -25,6 +21,7 @@ html, body{
     font-size: 6em;
     font-weight: normal;
     text-shadow: 0 0 10px #000;
+    padding-top: 10%;
 }
 .heading-subtext{
     color: #fff;
@@ -102,18 +99,26 @@ html, body{
     font-size: inherit;
 }
 
+.herorose {
+    width: 300px;
+}
+
 @media only screen and (max-width: 600px) {
     .header {
         background-position: 65% 60%;
     }
     .heading {
         font-size: 3.5em;
+        padding-top: 40%;
     }
     .gmaps {
         width: 100%;
     }
     .fixed-button {
         font-size: 12px;
+    }
+    .herorose {
+        width: 250px;
     }
 }
 
