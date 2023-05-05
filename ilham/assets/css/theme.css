@@ -109,6 +109,9 @@ html, body{
     .heading {
         font-size: 3.5em;
     }
+    .heading-subtext {
+        font-size: .4em;
+    }
     .gmaps {
         width: 100%;
     }
