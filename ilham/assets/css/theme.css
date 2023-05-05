@@ -43,6 +43,7 @@ html, body{
     right: 1em;
     text-decoration: none;
     z-index: 9999;
+    font-size: 14px;
 }
 .fixed-button::after{
     content: "\25BE";
@@ -106,5 +107,8 @@ html, body{
     }
     .gmaps {
         width: 100%;
+    }
+    .fixed-button {
+        font-size: 12px;
     }
 }
