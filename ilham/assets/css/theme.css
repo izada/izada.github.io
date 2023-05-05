@@ -94,8 +94,11 @@ html, body{
 }
 
 @media only screen and (max-width: 600px) {
+    .header {
+        background-position: 65% 60%;
+    }
     .heading {
-        font-size: 4em;
+        font-size: 3.5em;
     }
     .gmaps {
         width: 100%;
