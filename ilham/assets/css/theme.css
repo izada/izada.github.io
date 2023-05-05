@@ -24,6 +24,7 @@ html, body{
     padding-top: 10%;
 }
 .heading-subtext{
+    font-family: 'Quicksand', sans-serif;
     color: #fff;
     display: block;
     font-size: .4em;
