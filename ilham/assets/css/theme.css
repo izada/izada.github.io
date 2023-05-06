@@ -97,6 +97,8 @@ html, body{
 }
 .herorose {
     width: 300px;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
 }
 @media only screen and (max-width: 600px) {
     .header {
