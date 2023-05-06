@@ -67,7 +67,7 @@ html, body{
 }
 .sub-heading-details{
     font-family: 'Caveat', cursive;
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 2em;
 }
 .details{
@@ -79,31 +79,25 @@ html, body{
 }
 .fas {
     font-size: 3em;
-    opacity: .8;
 }
 .resort-image{
     width: 100%
 }
-
 .gmaps {
     width: 600px;
     height: 450px;
     border: 3px solid #28A7A6;
     border-radius: 6px;
 }
-
 .iconiz {
     color: #28A7A6;
 }
-
 .simpleicon {
     font-size: inherit;
 }
-
 .herorose {
     width: 300px;
 }
-
 @media only screen and (max-width: 600px) {
     .header {
         background-position: 65% 60%;
@@ -122,9 +116,7 @@ html, body{
         width: 250px;
     }
 }
-
 /*Pace Loader*/
-
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
@@ -133,11 +125,9 @@ html, body{
   -moz-user-select: none;
   user-select: none;
 }
-
 .pace-inactive {
   display: none;
 }
-
 .pace .pace-progress {
   background: #28A7A6;
   position: fixed;
