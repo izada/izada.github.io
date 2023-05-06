@@ -55,15 +55,15 @@
     <h1 class="sub-heading-details" id="details">Welcome to our wedding!</h1>
 
     <div class="details">
-      <i class="iconiz fas fa-calendar-check"></i>
-      <h2 class="details-heading" id="when">When</h2>
+      <i class="iconiz fas fa-calendar-check" id="when"></i>
+      <h2 class="details-heading">When</h2>
       <p>August 1, 2023<br>at 8 pm Beirut Time</p>
       <a href="data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//My Company//NONSGML Event Calendar//EN%0ABEGIN:VEVENT%0ADTSTART:20230801T200000%0ADTEND:20230801T230000%0ASUMMARY:Ibrahim & Ilham's Wedding%0ALOCATION:Beirut, Lebanon%0ADESCRIPTION:The wedding of Ibrahim and Ilham at XYZ%0AEND:VEVENT%0AEND:VCALENDAR" download="ibrahim-ilham-wedding.ics">Add to Calendar</a>
     </div>
 
     <div class="details">
-      <i class="iconiz fas fa-map-marked-alt"></i>
-      <h2 class="details-heading" id="where">Where</h2>
+      <i class="iconiz fas fa-map-marked-alt" id="where"></i>
+      <h2 class="details-heading">Where</h2>
       <p>XYZ<br>Beirut, Lebanon</p>
       <a href="https://goo.gl/maps/S1SS268ank2UcPLy8" rel="noopener, nofollow" target="_blank">Open on Google Maps <i class="iconiz simpleicon fas fa-external-link-alt"></i></a>
       <br><br>
@@ -71,8 +71,8 @@
     </div>
 
     <div class="details">
-      <i class="iconiz fas fa-asterisk"></i>
-      <h2 class="details-heading" id="notes">Notes</h2>
+      <i class="iconiz fas fa-asterisk" id="notes"></i>
+      <h2 class="details-heading">Notes</h2>
       <p>Parking is available!</p>
       <p>Your presence is the gift we desire <i class="iconiz simpleicon fas fa-heart"></i></p>
     </div>
@@ -82,10 +82,18 @@
   <script src="./assets/js/pace.min.js"></script>
   <script src="./assets/js/lazysizes.min.js"></script>
   <script src="./assets/js/smooth-scroll.polyfills.min.js"></script>
-  <script defer>
+  <script>
     var scroll = new SmoothScroll('a[href*="#"]');
     var dtlsButton = document.getElementById('dtlsButton')
     dtlsButton.addEventListener('click',hideButton,false);
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        dtlsButton.style.display = "none";
+      } else {
+        dtlsButton.style.display = "block";
+      }
+    }
 
     function hideButton() {
       dtlsButton.style.display = 'none';
