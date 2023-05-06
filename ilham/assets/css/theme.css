@@ -59,6 +59,7 @@ html, body{
     margin: 0 auto;
     max-width: 100%;
     padding: 2em 2em;
+    background-color: #eeeff4;
 }
 .sub-heading{
     font-family: 'Caveat', cursive;
