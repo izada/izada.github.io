@@ -85,7 +85,6 @@
   <script>
     var scroll = new SmoothScroll('a[href*="#"]');
     var dtlsButton = document.getElementById('dtlsButton')
-    dtlsButton.addEventListener('click',hideButton,false);
 
     window.onscroll = function() {
       if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -93,11 +92,7 @@
       } else {
         dtlsButton.style.display = "block";
       }
-    }
-
-    function hideButton() {
-      dtlsButton.style.display = 'none';
-    }   
+    } 
   </script>
 </body>
 </html>
