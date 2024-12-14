@@ -20,19 +20,24 @@
 
   <!-- Theme -->
   <meta name="theme-color" content="#000000">
-
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   
   <!-- CSS -->
   <style>
+    @font-face {
+      font-family: 'Poppins';
+      src: url('./assets/font/Poppins-Light.ttf');
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      src: url('./assets/font/Poppins-Medium.ttf');
+      font-weight: bold;
+    }
+
     body {
       height: 100%;
       background-color: #eeeff4;
       font-family: 'Poppins', sans-serif;
-      font-weight: 400;
       color: #000000;
       font-size: 12pt;
     }
@@ -61,7 +66,7 @@
     }
 
     #timestamp {
-      font-weight: 700;
+      font-weight: bold;
       color: #28A7A6;
     }
 
@@ -158,13 +163,13 @@
   <!-- Message -->
   <div id="message">
     <p>The current GMT timestamp is: <span id="timestamp"><script>new Date().valueOf()>document.write(new Date().valueOf());</script></p>
-    <br>
-    <img src="./assets/img/logo.png" alt="IZ" class="lazyload izlogo">
-  </div>
-  <!-- JS -->
-  <script src="./assets/js/pace.min.js"></script>
-  <script src="./assets/js/lazysizes.min.js"></script>
-  <script src="./assets/js/cookie.notice.min.js"></script>
-</body>
+      <br>
+      <img src="./assets/img/logo.png" alt="IZ" class="lazyload izlogo">
+    </div>
+    <!-- JS -->
+    <script src="./assets/js/pace.min.js"></script>
+    <script src="./assets/js/lazysizes.min.js"></script>
+    <script src="./assets/js/cookie.notice.min.js"></script>
+  </body>
 
-</html>
+  </html>
