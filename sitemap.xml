@@ -4,19 +4,19 @@
 	xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 	<url>
 		<loc>https://zada.info/</loc>
-		<lastmod>2024-07-31</lastmod>
+		<lastmod>2025-01-11</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://zada.info/screen.html</loc>
-		<lastmod>2024-07-31</lastmod>
+		<lastmod>2025-01-11</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://zada.info/timestamp.html</loc>
-		<lastmod>2024-07-31</lastmod>
+		<lastmod>2025-01-11</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 	</url>
