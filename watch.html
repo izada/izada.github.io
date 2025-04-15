@@ -29,13 +29,11 @@
     }
   </style>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELNWZ69M11"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-ELNWZ69M11');
   </script>
 </head>
@@ -87,14 +85,14 @@
   ctx.fillStyle = '#f5f5dc';
   ctx.fill();
 
-  // "ZADA" Text in Green
+  // "ZADA" Text
   ctx.fillStyle = '#013220';
   ctx.font = `${radius * 0.09}px Georgia, serif`;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   ctx.fillText('ZADA', cx, cy - radius * 0.3);
 
-  // Day Box Bottom Right
+  // Day Number Box
   const dayNumber = now.getDate();
   const boxWidth = radius * 0.26;
   const boxHeight = radius * 0.14;
@@ -103,11 +101,12 @@
 
   ctx.fillStyle = '#808080';
   ctx.fillRect(boxX - boxWidth / 2, boxY - boxHeight / 2, boxWidth, boxHeight);
+
   ctx.fillStyle = '#000';
   ctx.font = `${radius * 0.11}px Arial`;
   ctx.fillText(dayNumber, boxX, boxY);
 
-  // Hour Marks & Numbers (12, 3, 6, 9)
+  // Hour Marks & Numbers
   ctx.strokeStyle = '#000';
   ctx.lineWidth = radius * 0.012;
   ctx.fillStyle = '#000';
@@ -127,7 +126,8 @@
       const label = i === 12 ? '12' : i.toString();
       const nx = cx + radius * 0.65 * Math.cos(angle);
       let ny = cy + radius * 0.65 * Math.sin(angle) + radius * 0.04;
-      if (i === 6) ny -= radius * 0.05;
+
+      if (i === 6) ny -= radius * 0.06;
       if (i === 3 || i === 9) ny -= radius * 0.06;
 
       ctx.font = `${radius * 0.25}px Georgia, serif`;
@@ -135,7 +135,7 @@
     }
   }
 
-  // Clock Hands - Black
+  // Hands
   const sec = now.getSeconds();
   const min = now.getMinutes();
   const hr = now.getHours() % 12;
