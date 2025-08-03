@@ -66,18 +66,15 @@
     .confirm {
       border-radius: 6px;
   }
-
   .confirm:hover {
       opacity: 80%;
   }
-
   .learn-more:hover {
       opacity: 80%;
       border-bottom: none;
   }
 
   /*Pace Loader*/
-
   .pace {
       -webkit-pointer-events: none;
       pointer-events: none;
@@ -86,11 +83,9 @@
       -moz-user-select: none;
       user-select: none;
   }
-
   .pace-inactive {
       display: none;
   }
-
   .pace .pace-progress {
       background: #28A7A6;
       position: fixed;
@@ -138,17 +133,11 @@
             counterDisplay.textContent = count;
         }
 
-        document.body.addEventListener('click', function(event) {
+        document.body.addEventListener('pointerdown', function(event) {
             if (!event.target.closest('button')) {
                 changeCount(1);
             }
         });
-
-        document.body.addEventListener('touchstart', function(event) {
-            if (!event.target.closest('button')) {
-                changeCount(1);
-            }
-        }, { passive: true });
     </script>
 
 </body>
