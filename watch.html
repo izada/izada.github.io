@@ -26,20 +26,66 @@
 		canvas {
 			display: block;
 		}
+
+		/*Cookie Confirm Button*/
+
+		.confirm {
+			border-radius: 6px;
+		}
+
+		.confirm:hover {
+			opacity: 80%;
+		}
+
+		.learn-more:hover {
+			opacity: 80%;
+			border-bottom: none;
+		}
+
+		/*Pace Loader*/
+
+		.pace {
+			-webkit-pointer-events: none;
+			pointer-events: none;
+
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+
+		.pace-inactive {
+			display: none;
+		}
+
+		.pace .pace-progress {
+			background: #28A7A6;
+			position: fixed;
+			z-index: 2000;
+			top: 0;
+			right: 100%;
+			width: 100%;
+			height: 4px;
+		}
 	</style>
 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ELNWZ69M11"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
+
 		gtag('config', 'G-ELNWZ69M11');
 	</script>
+	
 </head>
 <body>
 
 	<canvas id="clockCanvas"></canvas>
 
+	<!-- JS -->
+	<script src="./assets/js/pace.min.js"></script>
+	<script src="./assets/js/cookie.notice.min.js"></script>
 	<script>
 		const canvas = document.getElementById('clockCanvas');
 		const ctx = canvas.getContext('2d');

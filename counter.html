@@ -22,17 +22,15 @@
 
     <!-- CSS -->
     <style>
-        @font-face {
+      @font-face {
           font-family: 'Poppins';
           src: url('./assets/font/Poppins-Light.ttf');
       }
-
       @font-face {
           font-family: 'Poppins';
           src: url('./assets/font/Poppins-Medium.ttf');
           font-weight: bold;
       }
-
       body {
         font-family: 'Poppins', sans-serif;
         background-color: #fffbe9;
@@ -42,13 +40,12 @@
         justify-content: center;
         height: 100vh;
         margin: 0;
-    }
-    h1 {
-        margin-bottom: 20px;
+        touch-action: manipulation;
     }
     .counter {
         font-size: 4rem;
         margin-bottom: 20px;
+        user-select: none;
     }
     .buttons {
         display: flex;
@@ -61,21 +58,71 @@
         border-radius: 5px;
         cursor: pointer;
     }
-    .increment { background-color: #4CAF50; color: white; }
-    .decrement { background-color: #f44336; color: white; }
-    .reset { background-color: #555; color: white; }
+    .decrement, .reset { background-color: #777; color: white; }
     button:hover { opacity: 0.8; }
+
+    /*Cookie Confirm Button*/
+
+    .confirm {
+      border-radius: 6px;
+  }
+
+  .confirm:hover {
+      opacity: 80%;
+  }
+
+  .learn-more:hover {
+      opacity: 80%;
+      border-bottom: none;
+  }
+
+  /*Pace Loader*/
+
+  .pace {
+      -webkit-pointer-events: none;
+      pointer-events: none;
+
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+  }
+
+  .pace-inactive {
+      display: none;
+  }
+
+  .pace .pace-progress {
+      background: #28A7A6;
+      position: fixed;
+      z-index: 2000;
+      top: 0;
+      right: 100%;
+      width: 100%;
+      height: 4px;
+  }
 </style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ELNWZ69M11"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ELNWZ69M11');
+</script>
+
 </head>
 <body>
-    <h1>Tally Counter</h1>
     <div class="counter" id="counter">0</div>
     <div class="buttons">
-        <button class="increment" onclick="changeCount(1)">+</button>
         <button class="decrement" onclick="changeCount(-1)">-</button>
         <button class="reset" onclick="resetCount()">Reset</button>
     </div>
 
+    <!-- JS -->
+    <script src="./assets/js/pace.min.js"></script>
+    <script src="./assets/js/cookie.notice.min.js"></script>
     <script>
         let count = 0;
         const counterDisplay = document.getElementById('counter');
@@ -86,9 +133,23 @@
         }
 
         function resetCount() {
+            if (!confirm('Are you sure you want to reset the count?')) return;
             count = 0;
             counterDisplay.textContent = count;
         }
+
+        document.body.addEventListener('click', function(event) {
+            if (!event.target.closest('button')) {
+                changeCount(1);
+            }
+        });
+
+        document.body.addEventListener('touchstart', function(event) {
+            if (!event.target.closest('button')) {
+                changeCount(1);
+            }
+        }, { passive: true });
     </script>
+
 </body>
 </html>
