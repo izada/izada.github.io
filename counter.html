@@ -119,19 +119,48 @@
     <script src="./assets/js/pace.min.js"></script>
     <script src="./assets/js/cookie.notice.min.js"></script>
     <script>
+        const STORAGE_KEY = 'tallyCount';
         let count = 0;
         const counterDisplay = document.getElementById('counter');
 
+        function render() {
+            counterDisplay.textContent = count;
+        }
+
+        function save() {
+            try {
+                localStorage.setItem(STORAGE_KEY, String(count));
+            } catch (e) {
+                // Fail silently if storage is unavailable
+            }
+        }
+
+        function load() {
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                count = saved !== null && !isNaN(parseInt(saved, 10)) ? parseInt(saved, 10) : 0;
+            } catch (e) {
+                count = 0;
+            }
+            render();
+        }
+
         function changeCount(value) {
             count += value;
-            counterDisplay.textContent = count;
+            render();
+            save();
         }
 
         function resetCount() {
             if (!confirm('Are you sure you want to reset the count?')) return;
             count = 0;
-            counterDisplay.textContent = count;
+            render();
+            try {
+                localStorage.removeItem(STORAGE_KEY);
+            } catch (e) {}
         }
+
+        document.addEventListener('DOMContentLoaded', load);
 
         document.body.addEventListener('pointerdown', function(event) {
             if (!event.target.closest('button')) {
