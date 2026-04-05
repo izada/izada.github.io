@@ -5,9 +5,11 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<!-- amend... -->
   <title>Ibrahim Zada - vCard</title>
   
-  <!-- OG Tags - minimal -->
+  <!-- amend... -->
+  <!-- OG Tags -->
   <meta property="og:title" content="Ibrahim Zada - vCard">
   <meta property="og:image" content="/assets/img/og.png">
   <meta property="og:description" name="description" content="Save contact directly to your device!">
@@ -149,6 +151,7 @@
 
 <div class="card">
 
+<!-- amend... -->
   <!-- vCard Details View -->
   <div class="content">
     <div class="name">Ibrahim Zada</div>
@@ -177,6 +180,7 @@
 <div id="toastMsg" class="toast"></div>
 
 <script>
+  // amend...
   // vCard Details Save
   (function() {
     const CONTACT = {
@@ -234,7 +238,7 @@
       link.click();
       document.body.removeChild(link);
       URL.revokeObjectURL(url);
-      showMessage("✓ vCard saved - open to add contact", 2200);
+      showMessage("✔ vCard opened - now add as a contact", 2200);
     }
 
     const btn = document.getElementById('saveBtn');
