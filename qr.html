@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="author" content="Ibrahim Zada">
+
+  <!-- Title -->
+  <title>QR Generator</title>
+
+  <!-- OG Tags -->
+  <meta property="og:title" content="izada">
+  <meta property="og:image" content="/assets/img/og.png">
+  <meta property="og:description" name="description" content="Instant QR Code generator!">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/assets/img/icon.png">
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#000000">
+  
+  <!-- CSS -->
+  <style>
+    @font-face {
+      font-family: 'Poppins';
+      src: url('./assets/font/Poppins-Light.ttf');
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      src: url('./assets/font/Poppins-Medium.ttf');
+      font-weight: bold;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #fffbe9;
+      --fg: #000000;
+      --muted: #444;
+      --accent: #fff;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem 1.5rem;
+      gap: 0;
+    }
+
+    /* ── QR output ── */
+    #qr-wrap {
+      width: 260px;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 3.5rem;
+      position: relative;
+    }
+
+    #qr-wrap canvas,
+    #qr-wrap img {
+      width: 260px !important;
+      height: 260px !important;
+      image-rendering: pixelated;
+    }
+
+    #qr-placeholder {
+      width: 260px;
+      height: 260px;
+      border: 1px solid var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #qr-placeholder span {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    /* ── Input area ── */
+    .input-wrap {
+      width: 100%;
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--fg);
+      color: var(--fg);
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      line-height: 1.5;
+      resize: none;
+      outline: none;
+      padding: 0.5rem 0;
+      text-align: center;
+      caret-color: var(--fg);
+      overflow: hidden;
+      min-height: 2.5rem;
+    }
+
+    textarea::placeholder {
+      color: var(--muted);
+    }
+
+    /* ── Action row ── */
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      margin-top: 2.5rem;
+    }
+
+    button {
+      background: none;
+      border: none;
+      color: var(--fg);
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 0.25rem 0;
+      opacity: 0.9;
+      transition: opacity 0.15s;
+      position: relative;
+    }
+
+    button::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: 0;
+      width: 100%; height: 1px;
+      background: var(--fg);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.2s ease;
+    }
+
+    button:hover::after { transform: scaleX(1); }
+    button:hover { opacity: 1; }
+
+    #btn-clear {
+      color: var(--muted);
+    }
+    #btn-clear::after { background: var(--muted); }
+
+    /* ── Download fade-in ── */
+    #btn-download {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    #btn-download.visible {
+      opacity: 0.9;
+      pointer-events: auto;
+    }
+    #btn-download.visible:hover { opacity: 1; }
+
+    /* ── Fade transition ── */
+    #qr-wrap {
+      transition: opacity 0.2s;
+    }
+    #qr-wrap.fading { opacity: 0; }
+  </style>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELNWZ69M11"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ELNWZ69M11');
+  </script>
+</head>
+<body>
+
+  <div id="qr-wrap">
+    <div id="qr-placeholder"><span>qr code will appear here</span></div>
+  </div>
+
+  <div class="input-wrap">
+    <textarea
+    id="input"
+    rows="1"
+    placeholder="Enter text or URL here..."
+    spellcheck="false"
+    autocomplete="off"
+    autocorrect="off"
+    autocapitalize="off"
+    ></textarea>
+
+    <div class="actions">
+      <button id="btn-download">Download</button>
+      <button id="btn-clear">Clear</button>
+    </div>
+  </div>
+  <!-- JS -->
+  <script src="./assets/js/pace.min.js"></script>
+  <script src="./assets/js/cookie.notice.min.js"></script>
+  <script src="./assets/js/qrcode.min.js"></script>
+  <script>
+    const input      = document.getElementById('input');
+    const qrWrap     = document.getElementById('qr-wrap');
+    const placeholder = document.getElementById('qr-placeholder');
+    const btnDown    = document.getElementById('btn-download');
+    const btnClear   = document.getElementById('btn-clear');
+
+    let qr = null;
+    let debounceTimer = null;
+    let lastValue = '';
+
+    // Auto-grow textarea
+    function autoGrow() {
+      input.style.height = 'auto';
+      input.style.height = input.scrollHeight + 'px';
+    }
+    input.addEventListener('input', autoGrow);
+
+    function clearQR() {
+      if (qr) { qr.clear(); qr = null; }
+      qrWrap.innerHTML = '';
+      qrWrap.appendChild(placeholder);
+      placeholder.style.display = 'flex';
+      btnDown.classList.remove('visible');
+    }
+
+    function generate(val) {
+      if (!val.trim()) { clearQR(); return; }
+
+      qrWrap.classList.add('fading');
+
+      setTimeout(() => {
+        // Remove old QR
+        if (qr) { qr.clear(); qr = null; }
+        qrWrap.innerHTML = '';
+
+        const container = document.createElement('div');
+        qrWrap.appendChild(container);
+
+        qr = new QRCode(container, {
+          text: val,
+          width: 260,
+          height: 260,
+          colorDark: '#000000',
+          colorLight: '#ffffff',
+          correctLevel: QRCode.CorrectLevel.H,
+        });
+
+        qrWrap.classList.remove('fading');
+        btnDown.classList.add('visible');
+      }, 180);
+    }
+
+    input.addEventListener('input', () => {
+      const val = input.value;
+      if (val === lastValue) return;
+      lastValue = val;
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => generate(val), 400);
+    });
+
+    btnClear.addEventListener('click', () => {
+      input.value = '';
+      lastValue = '';
+      input.style.height = 'auto';
+      clearQR();
+      input.focus();
+    });
+
+    btnDown.addEventListener('click', () => {
+      const canvas = qrWrap.querySelector('canvas');
+      if (!canvas) return;
+      const link = document.createElement('a');
+      link.download = 'qr.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    });
+
+    input.focus();
+  </script>
+</body>
+</html>
