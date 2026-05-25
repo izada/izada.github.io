@@ -4,37 +4,37 @@
 	xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 	<url>
 		<loc>https://zada.info/</loc>
-		<lastmod>2025-01-11</lastmod>
+		<lastmod>2026-05-25</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://zada.info/qr.html</loc>
-		<lastmod>2025-01-11</lastmod>
+		<lastmod>2026-05-25</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://zada.info/counter.html</loc>
-		<lastmod>2025-01-11</lastmod>
+		<lastmod>2026-05-25</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://zada.info/screen.html</loc>
-		<lastmod>2025-01-11</lastmod>
+		<lastmod>2026-05-25</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://zada.info/timestamp.html</loc>
-		<lastmod>2025-01-11</lastmod>
+		<lastmod>2026-05-25</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://zada.info/separator.html</loc>
-		<lastmod>2025-01-11</lastmod>
+		<lastmod>2026-05-25</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 	</url>
